@@ -15,8 +15,8 @@ import java.util.List;
 public class PersonController {
 
     @GetMapping
-    public List<Person> get(@RequestParam @Size(min= 3) String city){
-        return List.of(new Person("Henrique " + city));
+    public List<Person> get(@RequestParam @Size(min= 3) String city, @RequestParam @Size(min= 3) String country){
+        return List.of(new Person("Henrique " + city + " " + country));
     }
 
 }
